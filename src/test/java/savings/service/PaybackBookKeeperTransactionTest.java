@@ -49,6 +49,9 @@ public class PaybackBookKeeperTransactionTest {
     @Import({LocalDatabaseConfiguration.class, RepositoryConfiguration.class, ServiceConfiguration.class })
     public static class Config {
 
+        @Autowired
+        AccountRepository accountRepository;
+
         @Bean(name = "paybackRepositoryMock")
         public PaybackRepository paybackRepository() {
             return Mockito.mock(PaybackRepository.class);
@@ -57,7 +60,7 @@ public class PaybackBookKeeperTransactionTest {
         @Bean(name = "paybackBookKeeperMock")
         public PaybackBookKeeper paybackBookKeeper() {
             return new PaybackBookKeeperImpl(
-                    mock(AccountRepository.class),
+                    accountRepository,
                     mock(MerchantRepository.class),
                     paybackRepository());
         }
