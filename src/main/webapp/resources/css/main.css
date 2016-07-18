@@ -1,0 +1,33 @@
+#payback-form {
+    background-color: #87C489;
+    width: 465px;
+    padding: 20px;
+    margin: 50px auto;
+}
+
+#payback-form input {
+    width: 450px;
+    background: #fff;
+    border: 0;
+    padding: 5px;
+}
+
+#payback-form #submit {
+    color: #BFD7C1;
+    border: none;
+    background-color: #6EA070;
+}
+
+#payback-form #submit:hover {
+    background-color: #BFD7C1;
+    color: #6EA070;
+}
+
+.payback-label {
+    width: 250px;
+    padding-right: 15px;
+}
+
+.payback-value {
+    font-weight: bold;
+}
